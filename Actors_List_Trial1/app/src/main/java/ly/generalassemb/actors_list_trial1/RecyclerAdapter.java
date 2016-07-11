@@ -15,6 +15,7 @@ import java.util.List;
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myViewHolder> {
 
+
     @Override
     public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
@@ -60,9 +61,9 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myView
             int position = getAdapterPosition();
             Actor actor = this.actorList.get(position);
             Intent intent = new Intent(this.context, ActorDetail.class);
-            intent.putExtra("actor_name", actor.getACTOR_NAME());
-            intent.putExtra("actor_age", actor.getACTOR_AGE());
-            intent.putExtra("actor_sex", actor.getACTOR_SEX());
+            intent.putExtra("actor_name", actor.getName());
+            intent.putExtra("actor_age", actor.getAge());
+            intent.putExtra("actor_sex", actor.getSex());
             this.context.startActivity(intent);
 
 
