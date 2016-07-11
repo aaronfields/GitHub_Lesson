@@ -18,10 +18,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myView
 
 
     LayoutInflater mInflater;
-    List<Actor> mActorList;
+    ArrayList<Actor> mActorList;
     Context mContext;
 
-    RecyclerAdapter(List<Actor> actorList, Context context) {
+    RecyclerAdapter(ArrayList<Actor> actorList, Context context) {
         this.mActorList = actorList;
         this.mContext = context;
 
