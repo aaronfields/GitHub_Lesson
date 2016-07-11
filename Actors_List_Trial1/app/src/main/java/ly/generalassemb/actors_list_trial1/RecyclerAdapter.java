@@ -3,6 +3,7 @@ package ly.generalassemb.actors_list_trial1;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -15,13 +16,28 @@ import java.util.List;
  */
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myViewHolder> {
 
+    LayoutInflater mInflater;
+    List<Actor> mActorList;
+    Context mContext;
+
+    RecyclerAdapter(List<Actor> actorList ,Context context){
+        this.mActorList = actorList;
+        this.mContext = context;
+
+    }
+
     @Override
     public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        View v = mInflater.from(parent.getContext()).inflate(R.layout.list_item,parent,false);
+
+        myViewHolder holder= new myViewHolder(v,mContext,mActorList);
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(myViewHolder holder, int position) {
+
+       
 
     }
 
