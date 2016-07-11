@@ -8,11 +8,15 @@ public class Actor {
     String name;
     int age;
     String sex;
+    String imageUri;
 
-    public Actor(String name, int age, String sex) {
+
+    public Actor(String name, int age, String sex, String imageUri) {
         this.name = name;
         this.age = age;
         this.sex = sex;
+        this.imageUri = imageUri;
+
     }
 
     public String getName() {
@@ -37,5 +41,13 @@ public class Actor {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
     }
 }
