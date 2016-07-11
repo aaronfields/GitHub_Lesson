@@ -38,6 +38,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myView
 
     @Override
     public void onBindViewHolder(myViewHolder holder, int position) {
+
         holder.actorName.setText(mActorList.get(position).getName());
         holder.actorAge.setText(mActorList.get(position).getAge());
         holder.actorSex.setText(mActorList.get(position).getSex());
