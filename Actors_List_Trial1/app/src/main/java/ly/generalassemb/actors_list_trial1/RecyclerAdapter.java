@@ -79,10 +79,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myView
         public void onClick(View view) {
             int position = getAdapterPosition();
             Actor actor = this.actorList.get(position);
-            Intent intent = new Intent(this.context, ActorDetail.class);
+            Intent intent = new Intent(this.context, DetailActivity.class);
             intent.putExtra("actor_name", actor.getName());
             intent.putExtra("actor_age", actor.getAge());
             intent.putExtra("actor_sex", actor.getSex());
+            intent.putExtra("url",actor.getUrl());
             this.context.startActivity(intent);
 
 

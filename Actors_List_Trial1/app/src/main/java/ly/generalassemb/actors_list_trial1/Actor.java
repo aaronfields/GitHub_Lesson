@@ -8,11 +8,17 @@ public class Actor {
     String name;
     int age;
     String sex;
+    String url;
 
-    public Actor(String name, int age, String sex) {
+    public Actor(String name, int age, String sex, String url) {
         this.name = name;
         this.age = age;
         this.sex = sex;
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     public String getName() {

@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        Actor johnCena = new Actor("John Cena",39,"Male");
-        Actor chloeBennet = new Actor("Chloe Bennet",24,"Female");
-        Actor sethRogen = new Actor ("Seth Rogen",34,"Male");
+        Actor johnCena = new Actor("John Cena",39,"Male","http://wish.org/~/media/100-000/Content/Cena%20500/cena200x299.ashx?h=299&w=200&la=en");
+        Actor chloeBennet = new Actor("Chloe Bennet",24,"Female","http://vignette1.wikia.nocookie.net/agentsofshield/images/b/b1/Tumblr_mwophcxL1r1rjtt9yo1_1280.jpg/revision/latest?cb=20131202102556");
+        Actor sethRogen = new Actor ("Seth Rogen",34,"Male","http://i.dailymail.co.uk/i/pix/2014/04/23/article-2610769-1D45FCEB00000578-950_634x423.jpg");
         mActorList = new ArrayList<>();
         mActorList.add(johnCena);
         mActorList.add(chloeBennet);
