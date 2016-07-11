@@ -21,7 +21,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myView
     List<Actor> mActorList;
     Context mContext;
 
-    RecyclerAdapter(List<Actor> actorList ,Context context){
+    RecyclerAdapter(List<Actor> actorList, Context context) {
         this.mActorList = actorList;
         this.mContext = context;
 
@@ -30,30 +30,31 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.myView
 
     @Override
     public myViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = mInflater.from(parent.getContext()).inflate(R.layout.list_item,parent,false);
+        View v = mInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
 
-        myViewHolder holder= new myViewHolder(v,mContext,mActorList);
+        myViewHolder holder = new myViewHolder(v, mContext, mActorList);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(myViewHolder holder, int position) {
+        holder.actorName.setText(mActorList.get(position).getName());
+        holder.actorAge.setText(mActorList.get(position).getAge());
+        holder.actorSex.setText(mActorList.get(position).getSex());
 
-       
 
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mActorList.size();
     }
 
 
     public class myViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 
-
-        public TextView actorName,actorAge,actorSex;
+        public TextView actorName, actorAge, actorSex;
 
         List<Actor> actorList = new ArrayList<>();
         Context context;
