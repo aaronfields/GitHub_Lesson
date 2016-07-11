@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    RecyclerAdapter mRecyclerAdapter;
+    RecyclerView.Adapter mRecyclerAdapter;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView mRecyclerView;
     List<Actor> mActorList;
@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mRecyclerView = (RecyclerView)findViewById(R.id.recycler_view);
+        layoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(layoutManager);
 
         Actor johnCena = new Actor("John Cena",39,"Male");
         Actor chloeBennet = new Actor("Chloe Bennet",24,"Female");
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mActorList.add(chloeBennet);
         mActorList.add(sethRogen);
         mRecyclerAdapter = new RecyclerAdapter(mActorList,this);
-        layoutManager = new LinearLayoutManager(this);
+
         mRecyclerView.setAdapter(mRecyclerAdapter);
 
     }
